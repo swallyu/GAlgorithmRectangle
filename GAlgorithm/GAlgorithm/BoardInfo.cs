@@ -10,16 +10,22 @@ namespace GAlgorithm.GAlgorithm
         private float width;
         private float length;
 
-        public float getWidth() {
-            return width;
+        public float Width {
+            get
+            {
+                return width;
+            }
         }
 
         public void setWidth(float width) {
             this.width = width;
         }
 
-        public float getLength() {
-            return length;
+        public float Length {
+            get
+            {
+                return length;
+            }
         }
 
         public void setLength(float length) {
@@ -34,5 +40,16 @@ namespace GAlgorithm.GAlgorithm
             }
             this.panels.Add(panel);
         }
+        
+        public BoardInfo(){}
+
+        public BoardInfo(BoardInfo info)
+        {
+            this.width = info.width;
+            this.length = info.length;
+            
+        }
     }
+    
+    
 }

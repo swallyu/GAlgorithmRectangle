@@ -18,7 +18,7 @@ namespace GAlgorithm.GAlgorithm
         private float mutation = 0.0001f;
 
         /**
-         * 交叉率
+         * 交叉率[]
          */
         private float crossover = 0.0001f;
 

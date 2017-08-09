@@ -11,12 +11,15 @@
 
         private int rotateAngle = 0;
 
-        public float getWidth() {
-            return width;
+        public float Width {
+            get
+            {
+                return width;
+            }
         }
 
-        public float getLength() {
-            return length;
+        public float Length {
+            get { return length; }
         }
 
         public int getPanelId() {

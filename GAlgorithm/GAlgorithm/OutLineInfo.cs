@@ -31,15 +31,34 @@ namespace GAlgorithm.GAlgorithm
         public IList<OutLine> getLowestOutline()
         {
             //最低水平线
-            float minY = outLineList.Min(m => m.getY());
+            float minY = outLineList.Min(m => m.Y);
 
-            return new List<OutLine>(outLineList.Where(m => m.getY() == minY));
+            return new List<OutLine>(outLineList.Where(m => m.Y == minY));
         }
 
 
-        public void SearchGoodLine(Panel panel, out OutLine line)
+        
+        /// <summary>
+        /// 更新水平线轮廓，
+        /// 去除原有的轮廓线，新增排样后的轮廓线
+        /// </summary>
+        /// <param name="lowestLine">最低水平线</param>
+        /// <param name="getLength">长度</param>
+        /// <param name="getWidth">宽度</param>
+        public void update(OutLine lowestLine, float length, float width)
         {
-            //throw new System.NotImplementedException();
+            OutLine line1 = new OutLine(lowestLine.StartX,lowestLine.StartX+length,width+lowestLine.Y);
+            
+            this.update(line1);
+
+            if (lowestLine.Length == length)
+            {
+                return;
+            }
+            OutLine line2 = new OutLine(lowestLine.StartX+length,lowestLine.EndX,lowestLine.Y);
+            this.update(line2);
+            //去除原有的水平轮廓线，
+            this.outLineList.Remove(lowestLine);
         }
     }
 

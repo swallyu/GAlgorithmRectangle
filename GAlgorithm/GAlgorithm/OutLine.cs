@@ -15,16 +15,30 @@
             this.y = y;
         }
 
-        public float getStartX() {
-            return startX;
+        public float Length
+        {
+            get { return endX - startX; }
         }
 
-        public float getEndX() {
-            return endX;
+        public float StartX {
+            get
+            {
+                return startX;
+            }
         }
 
-        public float getY() {
-            return y;
+        public float EndX {
+            get
+            {
+                return endX;
+            }
+        }
+
+        public float Y {
+            get
+            {
+                return y;
+            }
         }
     }
 
