@@ -118,7 +118,7 @@ namespace GAlgorithm.GAlgorithm
                     else //长度不合适，查找后面的零件
                     {
                         float minLengh = this.panels.Skip(i + 1).Min(m => m.Length);
-                        
+                        //TODO:  ////
                     }
                 }
             }
